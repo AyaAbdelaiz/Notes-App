@@ -19,6 +19,7 @@ import com.ayaabdelaziz.mynotes.model.Note
 import com.ayaabdelaziz.mynotes.util.BottomSheetFragment
 import com.ayaabdelaziz.mynotes.viewmodel.NoteViewModel
 import kotlinx.android.synthetic.main.fragment_create_note.*
+import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -43,13 +44,13 @@ class CreateNoteFragment : Fragment() {
         val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
         val currentDate = sdf.format(Date())
         date.text = currentDate.toString()
+//        viewChange.setBackgroundColor(Color.parseColor(selectcolor))
 //        val noteTitle = title.text.toString()
 //        val noteSubTitle = note_sub_title.text.toString()
 //        val noteDesc = desc.text.toString()
 
         icon_done.setOnClickListener {
             var note = Note()
-            viewChange.setBackgroundColor(Color.parseColor(selectcolor))
             note.title = title.text.toString()
             note.subTitle = note_sub_title.text.toString()
             note.noteDesc = desc.text.toString()
@@ -79,43 +80,78 @@ class CreateNoteFragment : Fragment() {
 
             when (actioncolor) {
                 "blue" -> {
-                    selectcolor = intent!!.getStringExtra("selectedColor")!!
-                    viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    try {
+                        selectcolor = intent!!.getStringExtra("selectedColor")!!
+                        viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    }catch (e : Exception){
+                        Toast.makeText(requireContext(), "${e.printStackTrace()}", Toast.LENGTH_SHORT).show()
+                    }
+
 
                 }
                 "green" -> {
-                    selectcolor = intent!!.getStringExtra("selectedColor")!!
-                    viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    try {
+                        selectcolor = intent!!.getStringExtra("selectedColor")!!
+                        viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    }catch (e : Exception){
+                        Toast.makeText(requireContext(), "${e.printStackTrace()}", Toast.LENGTH_SHORT).show()
+                    }
+
 
                 }
                 "orange" -> {
-                    selectcolor = intent!!.getStringExtra("selectedColor")!!
-                    viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    try {
+                        selectcolor = intent!!.getStringExtra("selectedColor")!!
+                        viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    }catch (e : Exception){
+                        Toast.makeText(requireContext(), "${e.printStackTrace()}", Toast.LENGTH_SHORT).show()
+                    }
 
                 }
                 "mary" -> {
-                    selectcolor = intent!!.getStringExtra("selectedColor")!!
-                    viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    try {
+                        selectcolor = intent!!.getStringExtra("selectedColor")!!
+                        viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    }catch (e : Exception){
+                        Toast.makeText(requireContext(), "${e.printStackTrace()}", Toast.LENGTH_SHORT).show()
+                    }
 
                 }
                 "purple" -> {
-                    selectcolor = intent!!.getStringExtra("selectedColor")!!
-                    viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    try {
+                        selectcolor = intent!!.getStringExtra("selectedColor")!!
+                        viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    }catch (e : Exception){
+                        Toast.makeText(requireContext(), "${e.printStackTrace()}", Toast.LENGTH_SHORT).show()
+                    }
 
                 }
                 "yellow" -> {
-                    selectcolor = intent!!.getStringExtra("selectedColor")!!
-                    viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    try {
+                        selectcolor = intent!!.getStringExtra("selectedColor")!!
+                        viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    }catch (e : Exception){
+                        Toast.makeText(requireContext(), "${e.printStackTrace()}", Toast.LENGTH_SHORT).show()
+                    }
 
                 }
                 "black" -> {
-                    selectcolor = intent!!.getStringExtra("selectedColor")!!
-                    viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    try {
+                        selectcolor = intent!!.getStringExtra("selectedColor")!!
+                        viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    }catch (e : Exception){
+                        Toast.makeText(requireContext(), "${e.printStackTrace()}", Toast.LENGTH_SHORT).show()
+                    }
 
                 }
                 else -> {
-                    selectcolor = intent!!.getStringExtra("selectedColor")!!
-                    viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    try {
+                        selectcolor = intent!!.getStringExtra("selectedColor")!!
+                        viewChange.setBackgroundColor(Color.parseColor(selectcolor))
+                    }catch (e : Exception){
+                        Toast.makeText(requireContext(), "${e.printStackTrace()}", Toast.LENGTH_SHORT).show()
+                    }
+
                 }
             }
         }
